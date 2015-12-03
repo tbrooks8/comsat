@@ -35,17 +35,17 @@ public class FiberKafkaConsumer<K, V> implements Consumer<K, V> {
 
     @Override
     public Set<TopicPartition> assignment() {
-        return null;
+        return consumer.assignment();
     }
 
     @Override
     public Set<String> subscription() {
-        return null;
+        return consumer.subscription();
     }
 
     @Override
     public void subscribe(List<String> topics) {
-
+        consumer.subscribe(topics);
     }
 
     @Override
@@ -125,7 +125,7 @@ public class FiberKafkaConsumer<K, V> implements Consumer<K, V> {
 
     @Override
     public Map<MetricName, ? extends Metric> metrics() {
-        return null;
+        return consumer.metrics();
     }
 
     @Override
@@ -135,7 +135,7 @@ public class FiberKafkaConsumer<K, V> implements Consumer<K, V> {
 
     @Override
     public Map<String, List<PartitionInfo>> listTopics() {
-        return null;
+        return consumer.listTopics();
     }
 
     @Override
@@ -150,11 +150,11 @@ public class FiberKafkaConsumer<K, V> implements Consumer<K, V> {
 
     @Override
     public void close() {
-
+        consumer.close();
     }
 
     @Override
     public void wakeup() {
-
+        consumer.wakeup();
     }
 }
