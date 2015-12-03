@@ -433,7 +433,7 @@ project (':comsat-okhttp') {
 
 project (':comsat-kafka') {
     dependencies {
-        compile "org.apache.kafka:kafka-clients:0.8.2.2"
+        compile "org.apache.kafka:kafka-clients:0.9.0.0"
     }
 }
 
